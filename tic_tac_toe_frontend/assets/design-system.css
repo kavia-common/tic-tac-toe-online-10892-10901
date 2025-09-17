@@ -1,0 +1,86 @@
+:root {
+  /* Colors */
+  --color-adafb3: #adafb3;
+  --color-1d1d1f: #1d1d1f;
+  --color-ffffff: #ffffff;
+  --color-262629: #262629;
+  --color-ebebeb: #ebebeb;
+  --color-000000: #000000;
+  --color-f5f5f5: #f5f5f5;
+  --color-0047ff: #0047ff;
+  --color-e5e5e5: #e5e5e5;
+  --color-141414: #141414;
+  --color-1f1f1f: #1f1f1f;
+  --color-001754: #001754;
+  --color-e6e6e6: #e6e6e6;
+  --color-d8e3ff: #d8e3ff;
+  --color-ff00f5: #ff00f5;
+  --color-171717: #171717;
+  --color-176af6: #176af6;
+  --color-7b61ff: #7b61ff;
+  --color-2c2c2e: #2c2c2e;
+  --color-e5e5ea: #e5e5ea;
+  --color-cccccc: #cccccc;
+  --color-ff0000: #ff0000;
+  --color-e4e4e4: #e4e4e4;
+  --color-7939ff: #7939ff;
+
+  /* Typography (Lexend family assumed available on system; include via @import if needed) */
+  --font-family-lexend: "Lexend", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+
+  /* Typo tokens used by this screen */
+  --typo-17-size: 24px; --typo-17-weight: 700; --typo-17-line-height: 24px; --typo-17-letter-spacing: -0.24px; --typo-17-align: center; --typo-17-color: var(--color-f5f5f5);
+  --typo-18-size: 18px; --typo-18-weight: 500; --typo-18-line-height: 18px; --typo-18-letter-spacing: 0px; --typo-18-align: center; --typo-18-color: var(--color-ffffff);
+  --typo-19-size: 18px; --typo-19-weight: 500; --typo-19-line-height: 18px; --typo-19-letter-spacing: 0px; --typo-19-align: center; --typo-19-color: var(--color-ebebeb);
+  --typo-20-size: 24px; --typo-20-weight: 700; --typo-20-line-height: 24px; --typo-20-letter-spacing: -0.24px; --typo-20-align: center; --typo-20-color: var(--color-141414);
+  --typo-21-size: 18px; --typo-21-weight: 500; --typo-21-line-height: 18px; --typo-21-letter-spacing: 0px; --typo-21-align: center; --typo-21-color: var(--color-1f1f1f);
+  --typo-22-size: 18px; --typo-22-weight: 500; --typo-22-line-height: 18px; --typo-22-letter-spacing: 0px; --typo-22-align: center; --typo-22-color: var(--color-001754);
+
+  /* Spacing (subset used in screen) */
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-24: 24px;
+  --space-44: 44px;
+  --space-378: 378px;
+  --space-396: 396px;
+  --space-426: 426px;
+
+  /* Border radius tokens */
+  --radius-4: 4px;
+  --radius-6: 6px;
+  --radius-16: 16px;
+  --radius-24: 24px;
+  --radius-80: 80px;
+
+  /* Shadows from design system */
+  --shadow-0: 0 1px 2px 0 #000e33;
+  --shadow-1: 0 1px 1px 0 #000e33;
+  --shadow-2: 0 3px 2px 0 #0047ff;
+  --shadow-3: 0 1.5px 1px 0 #001f70;
+  --shadow-4: 0 1px 0 0 #003bd4;
+  --shadow-5: 0 4px 4px 0 #000e33;
+  --shadow-6: 0 2.0376px 4.0751px 0 #000e33;
+  --shadow-7: 0 6.1127px 4.0751px 0 #0047ff;
+  --shadow-8: 0 3.0563px 2.0376px 0 #001f70;
+  --shadow-9: 0 2.0376px 0 0 #003bd4;
+}
+
+/* Utility mixins via classes */
+.shadow-0 { box-shadow: var(--shadow-0); }
+.shadow-1 { box-shadow: var(--shadow-1); }
+.shadow-2 { box-shadow: var(--shadow-2); }
+.shadow-3 { box-shadow: var(--shadow-3); }
+.shadow-4 { box-shadow: var(--shadow-4); }
+.shadow-5 { box-shadow: var(--shadow-5); }
+.shadow-6 { box-shadow: var(--shadow-6); }
+.shadow-7 { box-shadow: var(--shadow-7); }
+.shadow-8 { box-shadow: var(--shadow-8); }
+.shadow-9 { box-shadow: var(--shadow-9); }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: var(--color-adafb3);
+  font-family: var(--font-family-lexend);
+}
