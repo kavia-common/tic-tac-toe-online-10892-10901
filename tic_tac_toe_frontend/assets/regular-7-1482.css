@@ -1,0 +1,273 @@
+:root {
+  /* convenience aliases from design-system.css for this screen */
+  --bg-app: var(--color-adafb3);
+}
+
+/* Base canvas */
+.screen-regular-7-1482 {
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  background: var(--bg-app);
+  border-radius: var(--radius-24);
+  overflow: hidden;
+  font-family: var(--font-family-lexend);
+}
+
+/* Common containers */
+.frame {
+  position: absolute;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* Dark Mode card */
+.frame.dark-mode {
+  left: 618px;  /* from x=2262 within global doc, relative to root x=1644 => 618 */
+  top: 257px;   /* from y=-4993 relative to root y=-5250 => 257 */
+  width: 426px;
+  height: 396px;
+  flex-direction: column;
+  background: var(--color-1d1d1f);
+  border-radius: var(--radius-16);
+  box-shadow: var(--shadow-0);
+  padding: 0;
+}
+
+/* Light Mode card */
+.frame.light-mode {
+  left: 168px;  /* 1812 - 1644 */
+  top: 146px;   /* -5104 - (-5250) */
+  width: 426px;
+  height: 396px;
+  flex-direction: column;
+  background: var(--color-f5f5f5);
+  border-radius: var(--radius-16);
+  box-shadow: var(--shadow-0);
+  padding: 0;
+}
+
+/* Inner components wrapper (378x348 in both) */
+.components {
+  position: absolute;
+  left: 24px; /* 1836-1812 and 2286-2262 */
+  top: 24px;  /* -5080-(-5104) and -4969-(-4993) */
+  width: 378px;
+  height: 348px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* visual spacing between header/rows */
+}
+
+/* Header (month nav strip) */
+.header {
+  position: relative;
+  width: 378px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Circular nav buttons */
+.nav-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-80);
+  background: var(--color-262629);
+  box-shadow: var(--shadow-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-btn .chevron {
+  width: 24px;
+  height: 24px;
+  background: var(--color-ebebeb); /* as style_4 applied to icon container */
+  -webkit-mask: none;
+  mask: none;
+}
+
+/* Month-Year group centered between buttons */
+.month-year {
+  width: 185px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* Month pill (normal/light and dark variants) */
+.month-pill.light,
+.year-pill.light {
+  background: var(--color-ffffff);
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-1);
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+.month-pill.dark,
+.year-pill.dark {
+  background: var(--color-262629);
+  border-radius: var(--radius-6);
+  box-shadow: var(--shadow-1);
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+/* Inner text row within pill is 24px high centered */
+.pill-inner {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Typography from tokens */
+.typo-17 { font-size: var(--typo-17-size); font-weight: var(--typo-17-weight); line-height: var(--typo-17-line-height); letter-spacing: var(--typo-17-letter-spacing); color: var(--typo-17-color); text-align: var(--typo-17-align); }
+.typo-18 { font-size: var(--typo-18-size); font-weight: var(--typo-18-weight); line-height: var(--typo-18-line-height); letter-spacing: var(--typo-18-letter-spacing); color: var(--typo-18-color); text-align: var(--typo-18-align); }
+.typo-19 { font-size: var(--typo-19-size); font-weight: var(--typo-19-weight); line-height: var(--typo-19-line-height); letter-spacing: var(--typo-19-letter-spacing); color: var(--typo-19-color); text-align: var(--typo-19-align); }
+.typo-20 { font-size: var(--typo-20-size); font-weight: var(--typo-20-weight); line-height: var(--typo-20-line-height); letter-spacing: var(--typo-20-letter-spacing); color: var(--typo-20-color); text-align: var(--typo-20-align); }
+.typo-21 { font-size: var(--typo-21-size); font-weight: var(--typo-21-weight); line-height: var(--typo-21-line-height); letter-spacing: var(--typo-21-letter-spacing); color: var(--typo-21-color); text-align: var(--typo-21-align); }
+.typo-22 { font-size: var(--typo-22-size); font-weight: var(--typo-22-weight); line-height: var(--typo-22-line-height); letter-spacing: var(--typo-22-letter-spacing); color: var(--typo-22-color); text-align: var(--typo-22-align); }
+
+/* Dropdown chevron (down) */
+.dropdown-icon {
+  width: 8px;
+  height: 8px;
+  background: var(--color-0047ff);
+  border-radius: 0; /* it's a vector; we represent via bg-colored square placeholder */
+}
+
+/* Day-of-week row */
+.dow {
+  width: 378px;
+  height: 44px;
+  display: grid;
+  grid-template-columns: repeat(7, 54px);
+  grid-column-gap: 0;
+  align-items: center;
+}
+.dow .cell {
+  width: 54px; height: 44px; display: flex; align-items: center; justify-content: center;
+}
+.dow .cell .inner {
+  width: 49px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: var(--radius-4);
+}
+
+/* Calendar weeks area */
+.weeks {
+  width: 378px;
+  height: 236px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.week-row {
+  width: 378px;
+  height: 44px;
+  display: grid;
+  grid-template-columns: repeat(7, 54px);
+}
+
+/* Day cells base */
+.day-cell {
+  width: 54px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-4);
+}
+.day-inner {
+  width: 50px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-6);
+}
+
+/* States */
+.state-disabled .day-inner {
+  background: var(--color-ffffff);
+  opacity: 0.1; /* style_12 */
+}
+.state-regular .day-inner {
+  background: var(--color-262629); /* dark card regular */
+  border: 0.5px solid var(--color-e5e5e5); /* style_78 */
+  box-shadow: var(--shadow-1);
+}
+.state-regular-light .day-inner {
+  background: var(--color-ffffff); /* light card regular */
+  border: 0.5px solid var(--color-e5e5e5); /* style_82 */
+  box-shadow: var(--shadow-1);
+}
+.state-today .day-inner {
+  background: var(--color-0047ff);
+  border: 2px solid var(--color-ffffff);
+  border-radius: var(--radius-6);
+}
+
+/* Text color variants inside cells */
+.dark .day-text-regular { /* for dark mode regular days use typo_19 color */
+  color: var(--typo-19-color);
+}
+.light .day-text-regular {
+  color: var(--typo-21-color);
+}
+
+/* Layout specifics inside cards (stack header / dow / weeks) */
+.card-stack {
+  position: absolute;
+  left: 24px;
+  top: 24px;
+  width: 378px;
+  height: 348px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Spacing inside header */
+.header .month-year .month-pill,
+.header .month-year .year-pill {
+  width: auto;
+  padding: 0 12px;
+}
+
+/* Adjust text placements precisely per Figma heights */
+.header .pill-inner .label {
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+/* Helper for vector chevrons used as placeholders */
+.icon-square-24 {
+  width: 24px;
+  height: 24px;
+  background: var(--color-ebebeb);
+}
+
+.icon-square-8 {
+  width: 8px;
+  height: 8px;
+  background: var(--color-0047ff);
+}
+
+/* Positioning header/dow/weeks within components container */
+.section-header { width: 378px; height: 44px; }
+.section-dow    { width: 378px; height: 44px; }
+.section-weeks  { width: 378px; height: 236px; }
+
+/* Color context root flags */
+.frame.dark-mode .dow .cell .inner { background: rgba(255,255,255,0.2); } /* style_10 for DoW text bg in dark */
+.frame.dark-mode .dow .cell .label { color: var(--typo-18-color); } /* white */
+.frame.light-mode .dow .cell .label { color: var(--typo-21-color); } /* dark text */
+
+/* Remove default margins */
+p, h1, h2, h3, h4, h5 { margin: 0; }
